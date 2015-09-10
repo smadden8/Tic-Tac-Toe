@@ -42,7 +42,8 @@ Win Horizontally as O
     Mark Location       2   1
     Check Location  2   1   O
     Winner Should Be    O
-
+	
+	
 Force a Tie
     Start New Game
     Mark Location       1   1
@@ -64,4 +65,3 @@ Force a Tie
     Mark Location       2   2
     Check Location  2   2   X
     Winner Should Be    TIE
-
