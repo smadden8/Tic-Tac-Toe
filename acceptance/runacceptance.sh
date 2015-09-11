@@ -1,0 +1,4 @@
+#!/bin/bash
+javac -cp .:../build/classes/main TicTacToeKeywords.java
+java -cp .:../build/classes/main:/Users/Shay/Documents/RobotFramework/robotframework-2.9.jar org.robotframework.RobotFramework TicTacToeTests.txt
+

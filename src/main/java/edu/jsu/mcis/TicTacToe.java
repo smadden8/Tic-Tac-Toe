@@ -6,7 +6,6 @@ public class TicTacToe {
 	private Mark[][] board;
 	private int a;
 	private int b;
-	private char nextTurn;
 	
 	public TicTacToe() {
 		board = new Mark[3][3];
@@ -30,26 +29,11 @@ public class TicTacToe {
 		else return ' ';
 	}
 	
-	public char setTurn() {
-		
-		char currentTurn = this.getMarkAt(a, b);
-		if(currentTurn == 'X') {
-			nextTurn = 'O';
-		} else if(currentTurn == 'O') {
-			nextTurn = 'X';
-		} 
-		nextTurn = currentTurn;
-		return nextTurn;
-	}
-	
-	}
-	
-	public void setMarkAt(int row, int col) {
+	public void setMarkAt(int row, int col, char mark) {
 		if (board[row][col] == Mark.XMARK || board[row][col] == Mark.OMARK) {
 			throw new IllegalArgumentException("Cannot put mark over existing mark.");
 		}
 		
-		char mark = this.setTurn();
 		Mark m = Mark.XMARK;
 		if(mark == 'X') m = Mark.XMARK;
 		else if(mark == 'O') m = Mark.OMARK;
@@ -86,8 +70,13 @@ public class TicTacToe {
 	}
 	
 	public char gameWinner() {
+		
 		char winner = this.getMarkAt(a, b);
-		return winner;
+		if(winner == 'X') {
+			return 'X';
+		} else if(winner == 'O') {
+			return 'O';
+		} else return ' ';
 	}
 	
 }

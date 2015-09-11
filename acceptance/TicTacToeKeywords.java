@@ -7,8 +7,8 @@ public class TicTacToeKeywords {
 		t = new TicTacToe();
 	}
 	
-	public void markLocation(int row, int col) {
-		t.setMarkAt(row, col);
+	public void markLocation(int row, int col, char mark) {
+		t.setMarkAt(row, col, mark);
 	}
 	
 	public String getMark(int row, int col) {
