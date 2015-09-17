@@ -7,8 +7,8 @@ public class TicTacToeKeywords {
 		t = new TicTacToe();
 	}
 	
-	public void markLocation(int row, int col, char mark) {
-		t.setMarkAt(row, col, mark);
+	public void markLocation(int row, int col) {
+		t.setMarkAt(row, col);
 	}
 	
 	public String getMark(int row, int col) {
@@ -20,9 +20,9 @@ public class TicTacToeKeywords {
 	}
     
 	public String getWinner() {
-		char theWinner = t.gameWinner();
-		if(theWinner == 'X') return "X";
-		else if(theWinner == 'O') return "O";
+		TicTacToe.GameStatus theWinner = t.gameWinner();
+		if(theWinner == TicTacToe.GameStatus.XWIN) return "X";
+		else if(theWinner == TicTacToe.GameStatus.OWIN) return "O";
 		else return "";
 	}
 }
